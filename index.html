@@ -4,220 +4,100 @@
 <meta charset="UTF-8">
 <title>Writer's Inn | Luxury Homestay</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
-/* ---------- BASIC RESET ---------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* ---------- COLORS (Luxury Theme) ---------- */
-:root {
-  --gold: #c6a75e;
-  --dark: #111;
-  --soft: #f8f6f2;
-}
-
-/* ---------- BODY ---------- */
-body {
-  font-family: "Segoe UI", sans-serif;
-  background: var(--soft);
-  color: #333;
-  line-height: 1.6;
-}
-
-/* ---------- HEADER ---------- */
-header {
-  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
-  url("https://images.unsplash.com/photo-1542314831-068cd1dbfeeb") center/cover;
-  height: 100vh;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  animation: fadeIn 1.5s ease;
-}
-
-header h1 {
-  font-size: 3.5rem;
-  letter-spacing: 3px;
-  color: var(--gold);
-}
-
-header p {
-  font-size: 1.2rem;
-  margin-top: 10px;
-}
-
-.btn {
-  margin-top: 30px;
-  padding: 12px 30px;
-  border: 1px solid var(--gold);
-  color: var(--gold);
-  text-decoration: none;
-  letter-spacing: 2px;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: var(--gold);
-  color: black;
-}
-
-/* ---------- SECTIONS ---------- */
-section {
-  padding: 80px 20px;
-  max-width: 1100px;
-  margin: auto;
-  animation: slideUp 1s ease;
-}
-
-section h2 {
-  text-align: center;
-  color: var(--gold);
-  font-size: 2.2rem;
-  margin-bottom: 30px;
-}
-
-/* ---------- ABOUT ---------- */
-.about p {
-  text-align: center;
-  font-size: 1.1rem;
-  max-width: 800px;
-  margin: auto;
-}
-
-/* ---------- ROOMS ---------- */
-.rooms {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-}
-
-.room {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,.1);
-  transition: transform 0.4s;
-}
-
-.room:hover {
-  transform: translateY(-10px);
-}
-
-.room img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.room-content {
-  padding: 20px;
-}
-
-.room-content h3 {
-  color: var(--dark);
-}
-
-.price {
-  color: var(--gold);
-  font-size: 1.2rem;
-  margin-top: 10px;
-}
-
-/* ---------- CONTACT ---------- */
-.contact {
-  text-align: center;
-}
-
-.contact p {
-  margin: 10px 0;
-  font-size: 1.1rem;
-}
-
-/* ---------- FOOTER ---------- */
-footer {
-  background: #0c0c0c;
-  color: #aaa;
-  text-align: center;
-  padding: 20px;
-}
-
-/* ---------- ANIMATIONS ---------- */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideUp {
-  from { transform: translateY(40px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header>
-  <h1>WRITER'S INN</h1>
-  <p>A Luxury Homestay for Peaceful Living</p>
+<!-- HERO -->
+<header class="hero">
+  <img src="images/logo.png" class="logo">
+  <h1>WRITER’S INN</h1>
+  <p>Where Every Stay Begins a Story</p>
   <a href="#contact" class="btn">BOOK YOUR STAY</a>
 </header>
 
 <!-- ABOUT -->
-<section class="about">
-  <h2>About Writer's Inn</h2>
-  <p>
-    Writer’s Inn is a calm and elegant homestay designed for travelers,
-    writers, and families seeking comfort, privacy, and authentic Kerala
-    hospitality in a peaceful atmosphere.
+<section class="section fade">
+  <h2>About Writer’s Inn</h2>
+  <p class="center-text">
+    Nestled in the peaceful surroundings of Kerala, Writer’s Inn is a refined
+    homestay designed for travelers, families, and creative souls seeking calm,
+    comfort, and authentic hospitality.
   </p>
 </section>
 
 <!-- ROOMS -->
-<section>
+<section class="section light fade">
   <h2>Our Rooms</h2>
-
   <div class="rooms">
 
-    <div class="room">
-      <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035">
-      <div class="room-content">
-        <h3>Deluxe Room</h3>
-        <p>AC • Wi-Fi • Attached Bathroom</p>
-        <div class="price">₹2400 / Night</div>
-      </div>
+    <div class="room-card">
+      <img src="images/room1.jpg">
+      <h3>Deluxe Room</h3>
+      <p>Elegant • Air-Conditioned • Wi-Fi</p>
+      <span>₹2400 / Night</span>
     </div>
 
-    <div class="room">
-      <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267">
-      <div class="room-content">
-        <h3>Premium Room</h3>
-        <p>Spacious • Quiet • Comfortable</p>
-        <div class="price">₹2400 / Night</div>
-      </div>
+    <div class="room-card">
+      <img src="images/room2.jpg">
+      <h3>Premium Room</h3>
+      <p>Spacious • Quiet • Premium Comfort</p>
+      <span>₹2400 / Night</span>
     </div>
 
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <h2>Contact & Booking</h2>
-  <p>📞 Phone / WhatsApp: <b>+91 8921732121</b></p>
-  <p>📍 Kerala, India</p>
-  <a class="btn" href="https://wa.me/918921732121">BOOK ON WHATSAPP</a>
+<!-- GALLERY -->
+<section class="section fade">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="images/gallery1.jpg">
+    <img src="images/gallery2.jpg">
+    <img src="images/gallery3.jpg">
+  </div>
 </section>
 
-<!-- FOOTER -->
+<!-- REVIEWS -->
+<section class="section light fade">
+  <h2>Guest Reviews</h2>
+  <div class="reviews">
+
+    <div class="review">
+      ⭐⭐⭐⭐⭐
+      <p>“A peaceful stay with beautiful surroundings. Truly relaxing.”</p>
+      <small>— Guest from Europe</small>
+    </div>
+
+    <div class="review">
+      ⭐⭐⭐⭐⭐
+      <p>“Clean rooms, warm hospitality and a soulful place.”</p>
+      <small>— Family Guest</small>
+    </div>
+
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="section fade">
+  <h2>Location</h2>
+  <iframe
+    src="https://www.google.com/maps?q=Vaikom,Kerala&output=embed"
+    loading="lazy">
+  </iframe>
+</section>
+
+<!-- CONTACT -->
+<section class="section dark fade" id="contact">
+  <h2>Contact & Booking</h2>
+  <p>📞 Phone / WhatsApp: <b>+91 9XXXXXXXXX</b></p>
+  <p>📍 Vaikom, Kerala</p>
+  <a href="https://wa.me/919XXXXXXXXX" class="btn light">BOOK ON WHATSAPP</a>
+</section>
+
 <footer>
-  © 2026 Writer’s Inn | Luxury Homestay
+  © 2026 Writer’s Inn · Kerala, India
 </footer>
 
 </body>
