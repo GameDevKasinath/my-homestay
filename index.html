@@ -1,170 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Vaikom Homestay</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Writer's Inn | Luxury Homestay</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      color: #333;
-    }
+<style>
+/* ---------- BASIC RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    header {
-      background: #2c5f2d;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
+/* ---------- COLORS (Luxury Theme) ---------- */
+:root {
+  --gold: #c6a75e;
+  --dark: #111;
+  --soft: #f8f6f2;
+}
 
-    nav {
-      background: #1e3d1f;
-      padding: 10px;
-      text-align: center;
-    }
+/* ---------- BODY ---------- */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: var(--soft);
+  color: #333;
+  line-height: 1.6;
+}
 
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+/* ---------- HEADER ---------- */
+header {
+  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+  url("https://images.unsplash.com/photo-1542314831-068cd1dbfeeb") center/cover;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: fadeIn 1.5s ease;
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+header h1 {
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  color: var(--gold);
+}
 
-    .hero {
-      background: url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85") center/cover;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 32px;
-      font-weight: bold;
-      text-shadow: 2px 2px 5px black;
-    }
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
 
-    .container {
-      padding: 30px;
-      max-width: 1000px;
-      margin: auto;
-      background: white;
-    }
+.btn {
+  margin-top: 30px;
+  padding: 12px 30px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
 
-    h2 {
-      color: #2c5f2d;
-    }
+.btn:hover {
+  background: var(--gold);
+  color: black;
+}
 
-    .rooms {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+/* ---------- SECTIONS ---------- */
+section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: auto;
+  animation: slideUp 1s ease;
+}
 
-    .room {
-      border: 1px solid #ddd;
-      padding: 15px;
-      border-radius: 8px;
-    }
+section h2 {
+  text-align: center;
+  color: var(--gold);
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
 
-    .room img {
-      width: 100%;
-      border-radius: 8px;
-    }
+/* ---------- ABOUT ---------- */
+.about p {
+  text-align: center;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: auto;
+}
 
-    .btn {
-      display: inline-block;
-      background: #2c5f2d;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 10px;
-    }
+/* ---------- ROOMS ---------- */
+.rooms {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
 
-    .btn:hover {
-      background: #244b24;
-    }
+.room {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  transition: transform 0.4s;
+}
 
-    footer {
-      background: #1e3d1f;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 30px;
-    }
-  </style>
+.room:hover {
+  transform: translateY(-10px);
+}
+
+.room img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.room-content {
+  padding: 20px;
+}
+
+.room-content h3 {
+  color: var(--dark);
+}
+
+.price {
+  color: var(--gold);
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* ---------- CONTACT ---------- */
+.contact {
+  text-align: center;
+}
+
+.contact p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: #0c0c0c;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+</style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
-  <h1>Vaikom Homestay</h1>
-  <p>Experience Traditional Kerala Hospitality</p>
+  <h1>WRITER'S INN</h1>
+  <p>A Luxury Homestay for Peaceful Living</p>
+  <a href="#contact" class="btn">BOOK YOUR STAY</a>
 </header>
 
-<nav>
-  <a href="#">Home</a>
-  <a href="#rooms">Rooms</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
-</nav>
+<!-- ABOUT -->
+<section class="about">
+  <h2>About Writer's Inn</h2>
+  <p>
+    Writer’s Inn is a calm and elegant homestay designed for travelers,
+    writers, and families seeking comfort, privacy, and authentic Kerala
+    hospitality in a peaceful atmosphere.
+  </p>
+</section>
 
-<div class="hero">
-  Welcome to Our Homestay
-</div>
+<!-- ROOMS -->
+<section>
+  <h2>Our Rooms</h2>
 
-<div class="container">
+  <div class="rooms">
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>
-      Our homestay is located near the famous Vaikom Mahadeva Temple.
-      We offer clean rooms, home-cooked Kerala food, and a peaceful stay
-      for families and foreign guests.
-    </p>
-  </section>
-
-  <section id="rooms">
-    <h2>Rooms & Tariff</h2>
-    <div class="rooms">
-
-      <div class="room">
-        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035">
+    <div class="room">
+      <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035">
+      <div class="room-content">
         <h3>Deluxe Room</h3>
-        <p>AC, WiFi, Attached Bathroom</p>
-        <p><b>₹2,500 / night</b></p>
+        <p>AC • Wi-Fi • Attached Bathroom</p>
+        <div class="price">₹2400 / Night</div>
       </div>
-
-      <div class="room">
-        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267">
-        <h3>Standard Room</h3>
-        <p>Fan, WiFi, Clean & Comfortable</p>
-        <p><b>₹1,500 / night</b></p>
-      </div>
-
     </div>
-  </section>
 
-  <section id="contact">
-    <h2>Contact & Booking</h2>
-    <p>📞 Phone / WhatsApp: <b>+91 9XXXXXXXXX</b></p>
-    <p>📍 Location: Vaikom, Kerala</p>
+    <div class="room">
+      <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267">
+      <div class="room-content">
+        <h3>Premium Room</h3>
+        <p>Spacious • Quiet • Comfortable</p>
+        <div class="price">₹2400 / Night</div>
+      </div>
+    </div>
 
-    <a class="btn" href="https://wa.me/919XXXXXXXXX">
-      Book Now on WhatsApp
-    </a>
-  </section>
+  </div>
+</section>
 
-</div>
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <h2>Contact & Booking</h2>
+  <p>📞 Phone / WhatsApp: <b>+91 8921732121</b></p>
+  <p>📍 Kerala, India</p>
+  <a class="btn" href="https://wa.me/918921732121">BOOK ON WHATSAPP</a>
+</section>
 
+<!-- FOOTER -->
 <footer>
-  © 2026 Vaikom Homestay | Kerala, India
+  © 2026 Writer’s Inn | Luxury Homestay
 </footer>
 
 </body>
